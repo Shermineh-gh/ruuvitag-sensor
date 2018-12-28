@@ -40,19 +40,19 @@ class MyRuuvi():
 
     @property
     def acc(self):
-        return self.state['acceleration']
+        return self.state['acceleration'] / 1000
 
     @property
     def acc_x(self):
-        return self.state['acceleration_x']
+        return self.state['acceleration_x'] / 1000
 
     @property
     def acc_y(self):
-        return self.state['acceleration_y']
+        return self.state['acceleration_y'] / 1000
 
     @property
     def acc_z(self):
-        return self.state['acceleration_z']
+        return self.state['acceleration_z'] / 1000
 
     @property
     def bat(self):
@@ -99,10 +99,10 @@ class MyRuuvi():
         print('Humidity:\t{:.2f}\t%'.format(self.humid))
         print('Pressure:\t{:.2f}\thPa'.format(self.press))
         print('-'*30)
-        print('Acceleration:\t{:.0f}\tmG'.format(self.acc))
-        print('X:\t\t{:.0f}\tmG'.format(self.acc_x))
-        print('Y:\t\t{:.0f}\tmG'.format(self.acc_y))
-        print('Z:\t\t{:.0f}\tmG'.format(self.acc_z))
+        print('Acceleration:\t{:.3f}\tmG'.format(self.acc))
+        print('X:\t\t{:.3f}\tmG'.format(self.acc_x))
+        print('Y:\t\t{:.3f}\tmG'.format(self.acc_y))
+        print('Z:\t\t{:.3f}\tmG'.format(self.acc_z))
         print('-'*30)
         print('Elevation X:\t{:.0f}\t°'.format(self.elev_x))
         print('Elevation Y:\t{:.0f}\t°'.format(self.elev_y))
