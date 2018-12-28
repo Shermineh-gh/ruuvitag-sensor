@@ -87,9 +87,6 @@ class MyRuuvi():
         self._sensor.update()
         self._data_count += 1
 
-    def update_reactive(self):
-        pass
-
     def print_to_shell(self):
         ''' Printing collected data from saved state to shell '''
 
