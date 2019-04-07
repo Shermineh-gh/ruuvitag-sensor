@@ -24,9 +24,9 @@ q = m.Queue()
 allData = {}
 
 tags = {
-    'F4:A5:74:89:16:57': 'kitchen',
-    'CC:2C:6A:1E:59:3D': 'bedroom',
-    'BB:2C:6A:1E:59:3D': 'livingroom'
+    'E8:C7:D7:F2:48:47': 'S1',
+    'C6:E0:4D:19:D0:47': 'S2',
+    'D5:98:A7:DB:02:77': 'S3'
 }
 
 timeout_in_sec = 5
@@ -73,4 +73,4 @@ if __name__ == '__main__':
     executor.submit(run_get_data_background, list(tags.keys()), q)
 
     # Strt Flask application
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5000, debug=True)
