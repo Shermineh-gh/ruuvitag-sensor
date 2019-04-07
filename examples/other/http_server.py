@@ -24,12 +24,12 @@ q = m.Queue()
 allData = {}
 
 tags = {
-    'E8:C7:D7:F2:48:47': 'S1',
+    'E8:C7:D7:F2:4B:47': 'S1',
     'C6:E0:4D:19:D0:47': 'S2',
     'D5:98:A7:DB:02:77': 'S3'
 }
 
-timeout_in_sec = 5
+timeout_in_sec = 2
 
 
 def run_get_data_background(macs, queue):
@@ -37,8 +37,14 @@ def run_get_data_background(macs, queue):
     Background process from RuuviTag Sensors
     """
     while True:
-        datas = RuuviTagSensor.get_data_for_sensors(macs, timeout_in_sec)
-        queue.put(datas)
+        try:
+            datas = RuuviTagSensor.get_data_for_sensors(macs, timeout_in_sec)
+            queue.put(datas)
+        except KeyboardInterrupt:
+            # When Ctrl+C is pressed
+            # execution of the while loop is stopped
+            print('Exit')
+            break
 
 
 def update_data():
