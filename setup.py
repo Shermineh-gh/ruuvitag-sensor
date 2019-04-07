@@ -33,7 +33,7 @@ setup(
     ],
     keywords='RuuviTag BLE Sensing',
     install_requires=[
-        'rx',
+        'rx', 'flask', 'flask_restful',
         'psutil;platform_system=="Linux"',
         'futures;python_version<"3.3"',
         'ptyprocess;platform_system=="Linux"'
