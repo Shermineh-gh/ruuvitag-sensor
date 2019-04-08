@@ -8,11 +8,12 @@ Endpoints:
 
 Requires:
     asyncio - Python 3.5
-    aiohttp - pip install aiohttp
+    aiohttp - pip3 install aiohttp
 '''
 
 from datetime import datetime
 import asyncio
+
 from multiprocessing import Manager
 from concurrent.futures import ProcessPoolExecutor
 from aiohttp import web
