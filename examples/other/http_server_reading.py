@@ -1,5 +1,5 @@
 '''
-Python3 needed for urllib3 and requests
+Python3 needed for requests
 '''
 
 from matplotlib.animation import FuncAnimation
