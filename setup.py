@@ -20,9 +20,9 @@ setup(
     url='https://github.com/musterp/ruuvitag-sensing',
     download_url='https://github.com/musterp/ruuvitag-sensing/tarball/'
     + ruuvitag_sensor.__version__,
-    author='Pascal Muster',
-    author_email='muster.pascal@t-online.de',
-    platforms='Linux, Unix',
+    author='Tomi Tuhkanen', # Co-Author: Pascal Muster
+    author_email='tomi.tuhkanen@iki.fi',
+    platforms='any',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
@@ -31,9 +31,9 @@ setup(
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3'
     ],
-    keywords='RuuviTag BLE Sensing',
+    keywords='RuuviTag BLE',
     install_requires=[
-        'rx', 'flask', 'flask_restful',
+        'rx',
         'psutil;platform_system=="Linux"',
         'futures;python_version<"3.3"',
         'ptyprocess;platform_system=="Linux"'
